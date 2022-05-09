@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int rem = 0, s = 0, p = 0;
+        for(int i=N;i>0;i=i/10)
+        {
+            rem = i % 10;
+            s = rem * (int)Math.pow(2,p) + s;
+            p++;
+        }
+        System.out.print(s);
+	}
+}
+
