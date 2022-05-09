@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int l = 0;
+        long d = 0;
+        long count = 10;
+                
+        for(int i=n;i>0;i=i/2)   // 12,6,3,1
+        {
+            l=i%2;               // 0,0,1,1
+            d=l*count+d;         // 0,0,1000,11000
+            count=count*10;      // 100,1000,10000,100000
+        }
+        System.out.println(d/10);
+	}
+}
