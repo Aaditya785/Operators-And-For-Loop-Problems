@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        int i=0,x=0;
+        for(int c=0;c<N;)
+        {
+            i++;
+            x=3*i+2;
+            if(x%4==0)
+            {
+                continue;
+            }
+            System.out.print(x+" ");
+            c++;
+        }
+	}
+}
